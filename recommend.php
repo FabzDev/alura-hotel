@@ -8,20 +8,19 @@ function recommend($condition = '', $question = ''){
 
 switch ($condition) {
   case "weather":
-    echo array_search($question, $weather);
+    $array=$weather;
   break;
   case "turism":
-    echo array_search($question, $turism);
+    $array=$turism;
   break;
   case "location":
-    echo array_search($question, $location);
+    $array=$location;
   break;
   default:
     echo "Welcome to the jungle";
 }
-
-  
+echo "A great place for you is ".array_search($question, $array);
 }
 
 
-recommend("location", "south");
+recommend("location", "north");
